@@ -107,13 +107,13 @@ namespace prueba_Nuget
         {
             Persona Tercero = new Persona();
             Tercero.TipoPersona = 1;
-            Tercero.Documento = 890903532;
-            Tercero.PDireccion = "Cra 63 33-60";
-            Tercero.PEmail = "felipesilva7@gmail.com;otrocorreo@otro.com";
-            Tercero.PTelefono = 4357334;
+            Tercero.Documento = 89090;
+            Tercero.PDireccion = "Cra ";
+            Tercero.PEmail = "uncorreo@gmail.com;otrocorreo@otro.com";
+            Tercero.PTelefono = 123456;
             Tercero.DCodigoDocumento = "31";
             Tercero.RCodigoTributario = 0;
-            Tercero.JRazonSocial = "INDUSTRIA COLOMBIANA DE CAFE S.A.S";
+            Tercero.JRazonSocial = "INDUSTRIA COLOMBIANA *** S.A.S";
             Tercero.DNombreDepartamento = "ANTIOQUIA";
             Tercero.CNombreCiudad = "MEDELLIN";
             Tercero.CodigoPais = "CO";
@@ -137,7 +137,7 @@ namespace prueba_Nuget
             CabeceraFactura.Total= 543080;
             CabeceraFactura.CodigoMonedaFactura = "COP";
             CabeceraFactura.CodigoEstablecimiento = "E-11";
-            CabeceraFactura.Documento = 860027404;
+            CabeceraFactura.Documento = 89090;
             CabeceraFactura.TiempoEsperaEmision = 0;
             CabeceraFactura.TipoFactura = "V";
             CabeceraFactura.NumeroResolucion = "9000000106802688";
