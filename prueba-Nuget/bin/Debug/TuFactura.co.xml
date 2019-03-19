@@ -1,0 +1,900 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TuFactura.co</name>
+    </assembly>
+    <members>
+        <member name="T:TuFactura.co.Modelo.Adjunto">
+            <summary>
+            Permite Cargar la información de un adjunto en la lista de anexos de un documento.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Adjunto.TipoArchivo">
+            <summary>
+            Propiedad que permite especificar el tipo de archivo adjunto. Valores enteros entre 0 y 2. Para 0 (cero), Representación gráfica de la factura (PDF). 1(uno), Cualquier Archivo que se quiera dejar Disponible para que los adquirientes descarguen del portal. 2(dos), Archivo que sera incluido en el correo de notificación de la factura junto con los tipo 0(cero). Los tipo 2(dos)  mas el tipo 0 no debe ser mayor a 10MB(Regla de los clientes de Correo). Los tipo(dos) deben cargarse antes de la notificación de la Factura o Nota. Los Archivos tipo 1 (uno) solo se podrán cargar antes de que la factura sea: Aprobada/Rechazada o AutoAprobada y el tamaño no puede ser mayor de 14MB por cada Archivo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Adjunto.B64">
+            <summary>
+            Propiedad que carga el archivo adjunto coddificado en B64.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Adjunto.NombreArchivo">
+            <summary>
+            Propiedad que Carga el nombre del archivo. El nombre del archivo debe contener la Extención del archivo. Este nombre sera el que se mostrara en el portal y en los archivos adjuntos del correo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.AdjuntoInput.TipoArchivo">
+            <summary>
+            Propiedad que permite especificar el tipo de archivo adjunto. Valores enteros entre 0 y 2. Para 0 (cero), Representación gráfica de la factura (PDF). 1(uno), Cualquier Archivo que se quiera dejar Disponible para que los adquirientes descarguen del portal. 2(dos), Archivo que sera incluido en el correo de notificación de la factura junto con los tipo 0(cero). Los tipo 2(dos)  mas el tipo 0 no debe ser mayor a 10MB(Regla de los clientes de Correo). Los tipo(dos) deben cargarse antes de la notificación de la Factura o Nota. Los Archivos tipo 1 (uno) solo se podrán cargar antes de que la factura sea: Aprobada/Rechazada o AutoAprobada y el tamaño no puede ser mayor de 14MB por cada Archivo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.AdjuntoInput.B64">
+            <summary>
+            Propiedad que carga el archivo adjunto coddificado en B64.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.AdjuntoInput.NombreArchivo">
+            <summary>
+            Propiedad que Carga el nombre del archivo. El nombre del archivo debe contener la Extención del archivo. Este nombre sera el que se mostrara en el portal y en los archivos adjuntos del correo.
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.AnexoInput">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para cargar Anexos una  Factura de Venta o Nota Débito/Crédito.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.AnexoInput.DocId">
+            <summary>
+            Propiedad que permite cargar el id del documento (Factura o Nota Débito/Crédito) al cual se le van a cargar la lista de adjunto
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.AnexoInput.Suscriptor">
+            <summary>
+            Valor Correspondiente al identificador del suscriptor. Este Valor es generado cuando el obligado a facturara se registra en https://tufactura.co/ e Inicia el proceso de facturación Con el Proveedor Tecnológico Software Estratégico
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.AnexoInput.Adjuntos">
+            <summary>
+            Propiedad que carga la lista de archivos adjuntos que seran cargados como anexos al Documento 
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.Cabecera">
+            <summary>
+            Contiene Todas las Propiedades neecsraias para crear la Cabecera de una Factura de Venta.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.DocumentoReferencia1">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.DocumentoReferencia2">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.DocumentoReferencia3">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.DocumentoReferencia4">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.DocumentoReferencia5">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.DocumentoReferencia6">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.DocumentoReferencia7">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.DocumentoReferencia8">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.DocumentoReferencia9">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.DocumentoReferencia10">
+            <summary>
+            Propiedad Utilizada para vincular un consecutivo interno y único para el nit del facturador. Este campo se utiliza para validar que no se envie dos veces o mas el mismo documento. Esta referencia se muestra se muestra en el portal de Clientes. A demás se permite el filtrado por este campo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.DocumentoReferencia11">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.Subtotal">
+            <summary>
+            Propiedad utilizada para cargar el subtotal de la factura. Es la suma del total de cada uno de los items que componen las líneas de productos o detalle de la factura sin impuestos. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.Base">
+            <summary>
+            Propiedad utilizada para cargar La Base de la factura. El el Subtotal menos los descuentos y demas cobros. Es el valor utilizado para calcular los impuestos. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.Descuentos">
+            <summary>
+            Propiedad utilizada para cargar el total de  descuentos presentes en la Factura. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.Abonos">
+            <summary>
+            Propiedad utilizada para cargar el total de  abonos o pagos parciales presentes en la Factura. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.Cargos">
+            <summary>
+            Propiedad utilizada para cargar el total(COP) en pesos de la Factura. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.ImpuestosRetenidos">
+            <summary>
+            Propiedad utilizada para cargar el total de Impuestos Retenidos presentes en la Factura. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.Total">
+            <summary>
+            Propiedad utilizada para cargar el total de la Factura. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.PlazoCredito">
+            <summary>
+            Propiedad utilizada para cargar el total de plazo en dias de las facturas a credito
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.NumeroResolucion">
+            <summary>
+            Propiedad utilizada para cargar el número de resolución de facturación  utilizado para Emitir la Factura. Si no se proporciona el sistema tomara una según criterios configurados. Si el obligado a facturar solo tiene una resolución de facturación no es necesario enviar ningun valor.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.CodigoMonedaFactura">
+            <summary>
+            Propiedad utilizada para cargar el Código del tipo de moneda de toda la factura Electrónica. Si no se proporciona el sistema tomara el peso Colombiano como codigo de moneda, COP. Se debe usar el estándar ISO 4217
+            </summary>  
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.CodigoEstablecimiento">
+            <summary>
+            Propiedad utilizada para cargar el Código de Tipo de establecimiento donde se genera el Documento. Si no se proporciona el sistema asignará E-02 que corresponde a "Establecimiento de comercio". Se deben usar los códigos incluidos Resolución 0019 de febrero de 2016 Anexo 1 apartado 8.16. Tipos de establecimientos
+            </summary>  
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.Documento">
+            <summary>
+            Propiedad utilizada para cargar el documento del tercero o Adquiriente de la Factura. No se debe incluir el dígito de verificación. Valores Permitidos enteros de 0 a 9223372036854775807
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.TiempoEsperaEmision">
+            <summary>
+            Propiedad utilizada como bandera para cargar Documentos en ambiente productivo para que sean procesados paso a paso y se pueda validar toda la trazabilidad del documento. (Recepción de la información, Generación de la Factura, Firma de la Factura, Entrega de la factura a la Dian). Este Valor debe ser igual a Cero 0 cuando ya se hayan surtido las pruebas.  
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.CodigoNotificacionAdicional">
+            <summary>
+            Propiedad utilizada para cargar correos Eletrónicos Adicionales a los que registra el tercero o adquiriente en el momento de su creacion o actualización. Estos correos aplicaran solo para la factura Actual. Para poner mas de un correo se deben separar las direcciones por punto y coma (;): corre1@micorreo.com;correo2@micorreo.com.  
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.TipoFactura">
+            <summary>
+            Propiedad utilizada para cargar el tipo de factura. se usa la siguiente notación: Factura Exportación E; Factura Importación I; Factura Contingencia O; Factura Factura de Venta V. Las letras deben estar en Mayúsculas 
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Cabecera.TazaDeCambio">
+            <summary>
+            Propiedad utilizada para cargar la taza de Cambio Negociada de la moneda de la factura. Aplica solo para las facturas que menejan moneda diferente a COP peso Colombiano. La taza representativa de mercado  de la moneda es calculada por la plataforma y se agrega al xml que se envia a la Dian.
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.CabeceraNota">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para Crear la Cabecera de la Nota Débito/Crédito.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.DocumentoReferencia1">
+            <summary>
+            Propiedad Utilizada para vincular un consecutivo interno y único para el nit del facturador. Este campo se utiliza para validar que no se envie dos veces o mas el mismo documento. Esta referencia se muestra se muestra en el portal de Clientes. A demás se permite el filtrado por este campo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.DocumentoReferencia2">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Nota Débito/Crédito. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.DocumentoReferencia3">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Nota Débito/Crédito. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.DocumentoReferencia4">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Nota Débito/Crédito. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.NotaTipo">
+            <summary>
+            Propiedad que carga el tipo de Nota a Crear: Nota Débito ó Crédito. C para Nota Crédito y D Para nota Débito. Se debe enviar la Letra en MAYÚSCULA 
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.Subtotal">
+            <summary>
+            Propiedad utilizada para cargar el subtotal de la Nota Débito/Crédito. Es la suma del total de cada uno de los items que componen las líneas de productos o detalle de la Nota Débito/Crédito sin impuestos. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.Base">
+            <summary>
+            Propiedad utilizada para cargar La Base de la Nota Débito/Crédito. El el Subtotal menos los descuentos y demas cobros. Es el valor utilizado para calcular los impuestos. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.Descuentos">
+            <summary>
+            Propiedad utilizada para cargar el total de  descuentos presentes en la Nota Débito/Crédito. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.Abonos">
+            <summary>
+            Propiedad utilizada para cargar el total de  abonos o pagos parciales presentes en la Nota Débito/Crédito. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.Cargos">
+            <summary>
+            Propiedad utilizada para cargar el total(COP) en pesos de la Nota Débito/Crédito. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.ImpuestosRetenidos">
+            <summary>
+            Propiedad utilizada para cargar el total de Impuestos Retenidos presentes en la Nota Débito/Crédito. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.Total">
+            <summary>
+            Propiedad utilizada para cargar el total de la Nota Débito/Crédito. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.NumeroResolucionNota">
+            <summary>
+            Propiedad utilizada para cargar el número de resolución de Nota Débito/Crédito utilizado para Emitir la Nota Débito/Crédito. Si no se proporciona el sistema tomara una según criterios configurados. Si el obligado a facturar solo tiene una resolución de Nota Débito/Crédito no es necesario enviar ningun valor.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.ConsecutivoFactura">
+            <summary>
+            Propiedad utilizada para cargar el número de la factura a la cual se le aplicara la Nota Débito/Crédito. Debe incluirse el Prefijo si la factura maneja prefijo. Este campo debe ser único por cada NIT facturador.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.CodigoMonedaNota">
+            <summary>
+            Propiedad utilizada para cargar el Código del tipo de moneda de toda la Nota Débito/Crédito. Si no se proporciona el sistema tomara el peso Colombiano como codigo de moneda, COP. Se debe usar el estándar ISO 4217
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.CodigoEstablecimiento">
+            <summary>
+            Propiedad utilizada para cargar el Código de Tipo de establecimiento donde se genera el Documento. Si no se proporciona el sistema asignará E-02 que corresponde a "Establecimiento de comercio". Se deben usar los códigos incluidos Resolución 0019 de febrero de 2016 Anexo 1 apartado 8.16. Tipos de establecimientos
+            </summary>  
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.TiempoEsperaEmision">
+            <summary>
+            Propiedad utilizada como bandera para cargar Documentos en ambiente productivo para que sean procesados paso a paso y se pueda validar toda la trazabilidad del documento. (Recepción de la información, Generación de la Factura, Firma de la Factura, Entrega de la factura a la Dian). Este Valor debe ser igual a Cero 0 cuando ya se hayan surtido las pruebas.  
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.CodigoNotificacionAdicional">
+            <summary>
+            Propiedad utilizada para cargar correos Eletrónicos Adicionales a los que registra el tercero o adquiriente en el momento de su creacion o actualización. Estos correos aplicaran solo para la Nota Débito/Crédito Actual. Para poner mas de un correo se deben separar las direcciones por punto y coma (;): corre1@micorreo.com;correo2@micorreo.com.  
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.CodigoConceptoNota">
+            <summary>
+            Propiedad utilizada para cargar el código del concepto asociado a la Nota Débito/Crédito. Se deben usar los códigos incluidos Resolución 0019 de febrero de 2016 Anexo 1 apartado 8.3.Concepto de Notas crédito y 8.4.Concepto de Notas débito
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.CabeceraNota.TotalCop">
+            <summary>
+            Propiedad utilizada para cargar el total en pesos Colombianos de la Nota Débito/Crédito.
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.DatosEnvio">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para Crear los Datos de Envio de a la Factura de Venta.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.DatosEnvio.DirecionEnvio">
+            <summary>
+            Propiedad que carga la direccion de Envio.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.DatosEnvio.DepartamentoEnvio">
+            <summary>
+            Propiedad que carga el departamento o estado de Envio.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.DatosEnvio.MunicipioEnvio">
+            <summary>
+            Propiedad que carga el Municipio de Envio.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.DatosEnvio.CiudadEnvio">
+            <summary>
+            Propiedad que carga la Ciudad de Envio.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.DatosEnvio.CodigoPais">
+            <summary>
+            Propiedad que carga el país de Envio. Se debe usar el estándar ISO 3166-1, en formato 2 dígitos; 
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.DatosEnvio.LugarDeEntrega">
+            <summary>
+            Propiedad que carga el Lugar De Entrega o estado de Envio.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.DatosEnvio.Telefono">
+            <summary>
+            Propiedad que carga El teléfono de envio.
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.FacturaInput">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para Crear Una Factura de Venta incluyendo los datos de la solicitud.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaInput.Solicitud">
+            <summary>
+            Objeto que carga las propiedades de la Solicitud
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaInput.FacturaVenta">
+            <summary>
+            Objeto que carga Todos los Objetos que componen la factura de Venta
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.FacturaPago">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para cargar los medios de pago de una  Factura de Venta o Notas Débito/Crédito.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaPago.IdItems">
+            <summary>
+            Valor auto incrementado por cada medio de pago asociado a la factura.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaPago.CodigoMedioPago">
+            <summary>
+            Valor que carga el codigo correspondiente al tipo de pago. Valores de refrencia, Resolución 0019 de febrero de 2016 Anexo 1 apartado 8.6.Medios de pago (Se debe usar el estándar 4461 de UN/CEFACT versión 06B)
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaPago.ValorMedioPago">
+            <summary>
+            Valor que carga el valor pagado por dicho medio de pago. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaPago.CodigoMonedaFactura">
+            <summary>
+            Propiedad utilizada para cargar el Código del tipo de moneda del Pago. Si no se proporciona el sistema tomara el peso Colombiano como codigo de moneda, COP. Se debe usar el estándar ISO 4217
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.FacturaVenta">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para Crear Una Factura de Venta.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaVenta.Cabecera">
+            <summary>
+            Objeto que contiene los valores de cabecera de la Factura
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaVenta.Observaciones">
+            <summary>
+            Objeto que contiene los valores para cargar observaciones a la Factura Electrónica. Estas observaciones se cargan en los XML que se envian a la Dian.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaVenta.DatosEnvio">
+            <summary>
+            Objeto que contiene los valores para cargar los Datos de envio de los productos. Estos valores solo se usan para la representación gráfica de la Factura. se usa cuando el cliente tiene una dirección de entrega y otra de Facturación.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaVenta.FacturaPagos">
+            <summary>
+            Objeto que contiene los valores para cargar los Datos asociados a los difrentes medios de pago de la Factura. (Se debe usar el estándar 4461 de UN/CEFACT versión 06B)
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaVenta.Items">
+            <summary>
+            Lista que contiene las lineas de productos o servicios que componen la Factura. Tambien conocido como Detalle de la Factura
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaVenta.ItmsImpuestos">
+            <summary>
+            Lista que registra los impuestos presentes en la Factura. Se deben usar los códigos incluidos Resolución 0019 de febrero de 2016 Anexo 1 apartado  8.5. Impuestos registrados en la Factura Electrónica
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaVenta.ItemsIncoterms">
+            <summary>
+            Lista que registra las condiciones de entrega para las facturas de exportación. Se deben usar los códigos incluidos Resolución 0019 de febrero de 2016 Anexo 1 apartado  8.11. Incoterms 
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaVenta.FleteAduana">
+            <summary>
+            Objeto que registra los fletes y seguros de las facturas de exportación. Solo se usa en la representación Gráfica de la Factura
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FacturaVenta.ImpuestosRetenidos">
+            <summary>
+            Lista Utilizada para mostrar los impuestos retenidos en la factura. Solo se usa en la representación Gráfica de la Factura
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.FleteAduana">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para Cargar los cobros de fletes y las Aduanas a las Factura de  Exportaciones.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.FleteAduana.RotuloFlete">
+            <summary>
+            Propiedad que carga el rótulo o label  Flete. Se usa solo para la representación gráfica de la Factura o Nota.
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.FleteAduana.RotuloAduana">
+            <summary>
+            Propiedad que carga el rótulo o label  Aduana. Se usa solo para la representación gráfica de la Factura o Nota.
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.FleteAduana.RotuloSeguro">
+            <summary>
+            Propiedad que carga el rótulo o label Seguro. Se usa solo para la representación gráfica de la Factura o Nota.
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.FleteAduana.Flete">
+            <summary>
+            Propiedad que carga el Valor Flete. Se usa solo para la representación gráfica de la Factura o Nota.
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.FleteAduana.Aduana">
+            <summary>
+            Propiedad que carga el Valor Aduana. Se usa solo para la representación gráfica de la Factura o Nota.
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.FleteAduana.Seguro">
+            <summary>
+            Propiedad que carga el Valor Seguro. Se usa solo para la representación gráfica de la Factura o Nota.
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.FleteAduana.MonedaAduna">
+            <summary>
+            Propiedad que carga la moneda de la Aduana. Se usa solo para la representación gráfica de la Factura o Nota.
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.FleteAduana.MonedaFlete">
+            <summary>
+            Propiedad que carga la moneda del Flete. Se usa solo para la representación gráfica de la Factura o Nota.
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.FleteAduana.MonedaSeguro">
+            <summary>
+            Propiedad que carga la moneda del Seguro. Se usa solo para la representación gráfica de la Factura o Nota.
+            </summary> 
+        </member>
+        <member name="T:TuFactura.co.Modelo.ImpuestosRetenidos">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para Crear la lista de impuestos retenidos en la Factura de Venta o Notas Débito/Crédito.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ImpuestosRetenidos.IdItems">
+            <summary>
+            Valor auto incrementado por cada impuesto Retenido Presente en la Factura.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ImpuestosRetenidos.ValorImpuesto">
+            <summary>
+            Propiedad Utilizada para cargar el valor del impuesto retenido. Se Usa solo para la representacion Gráfica de la Factura. Este valor se muestra en el formato y tal cual es recibido.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ImpuestosRetenidos.NombreImpuesto">
+            <summary>
+             Propiedad Utilizada para cargar el nombre del impuesto retenido. Se Usa solo para la representacion Gráfica de la Factura. Este valor se muestra tal cual es recibido. Ejemplo Retefuente.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ImpuestosRetenidos.IdCodigoMonedaItems">
+            <summary>
+             Propiedad Utilizada para cargar el Código de la Divisa. Se Usa solo para la representacion Gráfica de la Factura. Se debe usar el estándar ISO 4217
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.Item">
+            <summary>
+            Linea de producto de la Factura o item del detalle de la Factuta
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.IdItems">
+            <summary>
+            Valor auto incrementado por cada linea de producto o item de la Factura o Nota. Los items en la Factura son ordenados por este campo tanto en el xml como en la representacion Gráfica
+            </summary>    
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.Cantidad">
+            <summary>
+            Valor que carga la cantidad del producto y/o servicio facturado. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.Presentacion">
+            <summary>
+            Valor que carga la presentación del producto y/o servicio facturado. Ejemplo: Unidades, Caja, Docena, Kilo, Gramo
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.EanUpc">
+            <summary>
+            Valor que carga el codigo Ean ó Upc  del producto y/o servicio facturado
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.ReferenciaUno">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.ReferenciaDos">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.ReferenciaTres">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Factura. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.Referencia">
+            <summary>
+            Propiedad Utilizada para cargar la referencia Del Producto.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.Serial">
+            <summary>
+            Propiedad Utilizada para cargar el serial o seriales del producto y/o servicio facturado. Cuando el elemento tenga un serial para control de activo se debe asociar en la factura. Si el producto o servicio tiene mas de un serial se pueden poner todos en esta misma linea separados por espacios o tabulaciones.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.Descripcion">
+            <summary>
+            Propiedad Utilizada para cargar la descripción  del producto y/o servicio facturado.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.ValorUnitario">
+            <summary>
+            Propiedad Utilizada para cargar el valor unitario  del producto y/o servicio facturado sin impuestos.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.SubTotal">
+            <summary>
+            Propiedad Utilizada para cargar el SubTotal  del producto y/o servicio facturado sin impuestos. es el equivalente a Cantidad*ValorUnitario. Este valor debe llegar Calculado.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Item.ValorTotal">
+            <summary>
+            Propiedad Utilizada para cargar el valor total  del producto y/o servicio facturado sin impuestos. es el equivalente a Cantidad*ValorUnitario. Este valor debe llegar Calculado. Nota Este Campo sera utilizado cuando la Dian Solicite especificar los impuestos a nivel de línea de producto, Por el momento sera el mismo valor del SubTotal.
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.ItemNota">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para Crear los Items del detalle de la Nota Débito/Crédito.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.IdItems">
+            <summary>
+            Valor auto incrementado por cada linea de producto o item de la Factura o Nota. Los items en la Nota Débito/Crédito son ordenados por este campo tanto en el xml como en la representacion Gráfica
+            </summary>    
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.Cantidad">
+            <summary>
+            Valor que carga la cantidad del producto y/o servicio de la Nota Débito/Crédito. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.Presentacion">
+            <summary>
+            Valor que carga la presentación del producto y/o servicio de la Nota Débito/Crédito. Ejemplo: Unidades, Caja, Docena, Kilo, Gramo
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.EanUpc">
+            <summary>
+            Valor que carga el codigo Ean ó Upc  del producto y/o servicio de la Nota Débito/Crédito
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.ReferenciaUno">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Nota Débito/Crédito. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.ReferenciaDos">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Nota Débito/Crédito. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.ReferenciaTres">
+            <summary>
+            Propiedad Utilizada para cargar valores de referencia necesarios para la representación gráfica de la Nota Débito/Crédito. Cada facturador da su significdo.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.Referencia">
+            <summary>
+            Propiedad Utilizada para cargar la referencia Del Producto.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.Serial">
+            <summary>
+            Propiedad Utilizada para cargar el serial o seriales del producto y/o servicio de la Nota Débito/Crédito. Cuando el elemento tenga un serial para control de activo se debe asociar en la Nota Débito/Crédito. Si el producto o servicio tiene mas de un serial se pueden poner todos en esta misma linea separados por espacios o tabulaciones.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.Descripcion">
+            <summary>
+            Propiedad Utilizada para cargar la descripción  del producto y/o servicio de la Nota Débito/Crédito.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.ValorUnitario">
+            <summary>
+            Propiedad Utilizada para cargar el valor unitario  del producto y/o servicio de la Nota Débito/Crédito sin impuestos.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.SubTotal">
+            <summary>
+            Propiedad Utilizada para cargar el SubTotal  del producto y/o servicio de la Nota Débito/Crédito sin impuestos. es el equivalente a Cantidad*ValorUnitario. Este valor debe llegar Calculado.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemNota.ValorTotal">
+            <summary>
+            Propiedad Utilizada para cargar el valor total  del producto y/o servicio de la Nota Débito/Crédito sin impuestos. es el equivalente a Cantidad*ValorUnitario. Este valor debe llegar Calculado. Nota Este Campo sera utilizado cuando la Dian Solicite especificar los impuestos a nivel de línea de producto, Por el momento sera el mismo valor del SubTotal.
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.ItemsIncoterm">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para cargar los Incoterm a las Factura de Venta.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemsIncoterm.IdItems">
+            <summary>
+            Valor auto incrementado por cada Incoterm Presente en la Factura.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemsIncoterm.CodigoIncoterms">
+            <summary>
+            Propiedad que carga el codigo del Incoterm presente en la Factura de exportación. Se deben usar los códigos incluidos Resolución 0019 de febrero de 2016 Anexo 1 apartado  8.11. Incoterms 
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItemsIncoterm.DetalleIncoTerms">
+            <summary>
+            Propiedad que carga una observacion o detalle al Incoterm presente en la Factura de exportación.
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.ItmsImpuesto">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para Crear la lista de impuestos reportados en la Factura de Venta o Nota Débito/Crédito.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItmsImpuesto.IdItems">
+            <summary>
+            Valor auto incrementado por cada impuesto de la Factura o Nota. Los items en la Nota Débito/Crédito o factura son ordenados por este campo tanto en el xml como en la representacion Gráfica. Los impuestos se deben Agrupar por codigo de impuesto y tarifa.
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItmsImpuesto.BaseImpuesto">
+            <summary>
+            Valor que carga la base utilizada para el cánculo del impuesto. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>       
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItmsImpuesto.ValorImpuesto">
+            <summary>
+            Propiedad Utilizada para cargar el valor del impuesto a reportar. Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES
+            </summary>         
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItmsImpuesto.TarifaImpuesto">
+            <summary>
+            Propiedad Utilizada para cargar la tarifa del impuesto a reportar. solo se deben cargar números. Por ejemplo si es el 19% se registra 19, el 1% se registra el 1, el 0.1% se regitra 0.1 . Se utiliza como separador decimal el punto(.) NO USAR SEPARADORES DE MILES. Se debe agrupar por este campo.
+            </summary> 
+        </member>
+        <member name="P:TuFactura.co.Modelo.ItmsImpuesto.CodigoImpuesto">
+            <summary>
+            Valor que carga el codigo que representa el tipo de impuesto a reportar. Se deben usar los códigos incluidos Resolución 0019 de febrero de 2016 Anexo 1 apartado 8.5. Impuestos registrados en la Factura Electrónica. este campo junto con la tarifa del impuesto crean un Grupo. si en la factura se tiene Impuestos codigo 01 (IVA) de tariafa del 19, 8 etc. Se creara un registro por cada Grupo. Uno Para el IVA del 19 y otro para el IVA del 8 respectivamente.
+            </summary> 
+             [Display(Name = "Id Item")]
+        </member>
+        <member name="T:TuFactura.co.Modelo.NotaVenta">
+            <summary>
+            Carga  Todos los Objetos que componen la Nota Débito/Crédito de Venta
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.NotaVenta.Cabecera">
+            <summary>
+            Objeto que contiene los valores de cabecera de la Nota Débito/Crédito
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.NotaVenta.Observaciones">
+            <summary>
+            Objeto que contiene los valores para cargar observaciones a la Nota Débito/Crédito. Estas observaciones se cargan en los XML que se envian a la Dian.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.NotaVenta.Items">
+            <summary>
+            Lista que contiene las lineas de productos o servicios que componen la Nota Débito/Crédito. Tambien conocido como Detalle de la Nota Débito/Crédito
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.NotaVenta.ItmsImpuestos">
+            <summary>
+            Lista que registra los impuestos presentes en la Nota Débito/Crédito. Se deben usar los códigos incluidos Resolución 0019 de febrero de 2016 Anexo 1 apartado  8.5. Impuestos registrados en la Factura Electrónica
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.NotaVentaInputDTO">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para Crear Una Nota Débito/Crédito de Venta incluyendo los datos de la solicitud.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.NotaVentaInputDTO.Solicitud">
+            <summary>
+            Objeto que carga las propiedades de la Solicitud
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.NotaVentaInputDTO.NotaVenta">
+            <summary>
+            Carga  Todos los Objetos que componen la Nota Débito/Crédito de Venta
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.Observaciones">
+            <summary>
+            Contiene todos los objetos y propiedades necesarias para Crear las observaciones a las Factura de Venta o Nota Débito/Crédito.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Observaciones.Lista">
+            <summary>
+            Lista que carga las observaciones de la Factura o Nota. Estas observaciones son enviadas a la Dian en el XML de la Factura o Nota.
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Persona.TipoPersona">
+            <summary>
+            Indica si el tercero es Natural(2), juridico(1) o  gran contribuyente(3).
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.Modelo.Solicitud">
+            <summary>
+            Cargar Los Parámetros necesarios para hacer la petición al servicio
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Solicitud.Nonce">
+            <summary>
+            Valor Tipo Guid que identifica de manera unica cada petición. Se recomienda que tenga la estructura: 00000000-0000-0000-0000-000000000000
+            </summary>
+        </member>
+        <member name="P:TuFactura.co.Modelo.Solicitud.Suscriptor">
+            <summary>
+            Valor Correspondiente al identificador del suscriptor. Este Valor es generado cuando el obligado a facturara se registra en https://tufactura.co/ e Inicia el proceso de facturación Con el Proveedor Tecnológico Software Estratégico
+            </summary>
+        </member>
+        <member name="F:TuFactura.co.TipoAdjunto.Representacion">
+            <summary>
+            Indica que el adjunto sera usado para la representación Grafica de la Factura o de la Nota débito/Crédito. PDF del documento Electrónico Este Adjunto tambien queda Disponible para descargar desde el portal. 
+            </summary>
+        </member>
+        <member name="F:TuFactura.co.TipoAdjunto.AdjuntoPortal">
+            <summary>
+            Indica que el adjunto solo estara disponible para que lo descarguen desde el portal.tufactura.co o demo..tufactura.co
+            </summary>
+        </member>
+        <member name="F:TuFactura.co.TipoAdjunto.AdjuntoCorreo">
+            <summary>
+            Indica que el adjunto sera incluido como adjunto en el correo electronico o mensaje de WhatsApp al momento de la Notofocación. Este Adjunto tambien queda Disponible para descargar desde el portal. 
+            </summary>
+        </member>
+        <member name="T:TuFactura.co.TuFacturaco">
+            <summary>
+            Clase que hace uso de los servicios de Tufactura.co. Para información visite: http://integradordemo.tufactura.co/Help/ 
+            </summary>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.#ctor(System.String,System.String,System.String,TuFactura.co.Ambientes)">
+            <summary>
+            Instancia un Objeto TuFacturaco con todos los metodos y utilidades neecsarias para Emitir Facturas Electrónicas
+            </summary>
+            <param name="Usuario">Usuario autenticación servicio webAPI</param>
+            <param name="Contraseña">Contraseña autenticación servicio webAPI</param>
+            <param name="Suscriptor">Id del obligado a Facturar. Se debe generar en tufactura.co</param>
+            <param name="Ambiente">Indica si se utilizara el ambiente de habilitación(Pruebas) u Operación (Producción)</param>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.EstadoAsync">
+            <summary>
+            Permite Consultar el estado de los servicios de integración y Facturación. Para información visite: http://integradordemo.tufactura.co/Help/
+            </summary>
+            <returns>Información del obligado a Facturar e información de las resoluciones de Facturación</returns>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.CrearActualizarPersonaAsync(TuFactura.co.Modelo.Persona)">
+            <summary>
+            Crea o Actualiza el adquiriente o tercero de las facturas de venta. Para información visite: http://integradordemo.tufactura.co/Help/ 
+            </summary>
+            <param name="Tercero">Objeto de Tipo persona</param>
+            <returns>El Adquiriente Almacenado junto con la informacion de la Solicitud. </returns>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.EmitirFacturaAsync(TuFactura.co.Modelo.FacturaVenta)">
+            <summary>
+            Emite una Factura Electronica segun los establecido en el decreto 2242(Generación, Firma,Envio a Dian y Notificación). Para información visite: http://integradordemo.tufactura.co/Help/ 
+            </summary>
+            <param name="Factura">Objeto de Tipo Factura de venta</param>
+            <returns>Información relacionada con la Factura emitida. Objeto FacturaEmitida</returns>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.EmitirNotasAsync(TuFactura.co.Modelo.NotaVenta)">
+            <summary>
+            Emite una Nota Débito/Crédito Electronica segun los establecido en el decreto 2242(Generación, Firma,Envio a Dian y Notificación). Para información visite: http://integradordemo.tufactura.co/Help/
+            </summary>
+            <param name="Nota">Objeto de Tipo Nota</param>
+            <returns>Información relacionada con la Nota Bébito/Crédito emitida. Objeto NotaEmitida</returns>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.CargarAnexosAsync(System.String,System.Collections.Generic.List{TuFactura.co.Modelo.AdjuntoInput})">
+            <summary>
+            Permite cargar Anexos en B64 hasta de 10MB a las Facturas o Notas Débito/Crédito Emitidas. Para información visite: http://integradordemo.tufactura.co/Help/ 
+            </summary>
+            <param name="DocumentoId">Indentificardor único del documento electrónico al que se asociaran los Adjuntos</param>
+            <param name="adjuntos">Lista de Archivos Adjuntos. Por Cada petición todos los adjuntos no deben pasar los 10Mb </param>
+            <returns></returns>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.ConsultarTrazabilidadFacturaAsync(System.String)">
+            <summary>
+            Permite Consultar el ultimo estado y el historico de trazabilidad de una Factura Electronica. Para información visite: http://integradordemo.tufactura.co/Help/
+            </summary>
+            <param name="FactId">Id de la factura Electrónica Emitida</param>
+            <returns>Trazabilidad Factura Electrónica. Objeto FacturaTraza</returns>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.ConsultarTrazabilidadNotaAsync(System.String)">
+            <summary>
+            Permite Consultar el ultimo estado y el historico de trazabilidad de una Nota Débito/Crédito Electronica. Para información visite: http://integradordemo.tufactura.co/Help/
+            </summary>
+            <param name="NotaId">Id de la Nota Débito/Crédito Electrónica Emitida</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.GenerarAdjunto(System.String,TuFactura.co.TipoAdjunto)">
+            <summary>
+            Generar archivo Adjunto de una ubicación de disco. Este adjunto puede ser cargado a la lista de Anexos de un Documento.
+            </summary>
+            <param name="Ruta">Path o ruta completa del Archivo (.PDF, .JPG, .MP4, .XLSX etc) el cual sera convertido en adjunto y se podra cargar a la lista de Anexos</param>
+            <param name="tipo">Tipo de adjunto del archivo. mas Información :http://integradordemo.tufactura.co/Help/ResourceModel?modelName=AdjuntoInput </param>
+            <returns></returns>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.GenerarAdjunto(System.IO.Stream,TuFactura.co.TipoAdjunto,System.String)">
+            <summary>
+            Generar archivo Adjunto de un Stream. Este adjunto puede ser cargado a la lista de Anexos de un Documento.
+            </summary>
+            <param name="stream">Stream con informacion del archivo</param>
+            <param name="tipo">Tipo de adjunto del archivo. mas Información :http://integradordemo.tufactura.co/Help/ResourceModel?modelName=AdjuntoInput </param>
+            <param name="NombreArchivo">El nombre con el que sera almacenado el Archivo. debe contener la extencion del archivo.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.GenerarAdjunto(System.IO.MemoryStream,TuFactura.co.TipoAdjunto,System.String)">
+            <summary>
+            Generar archivo Adjunto de un MemoryStream. Este adjunto puede ser cargado a la lista de Anexos de un Documento.
+            </summary>
+            <param name="memoryStream">MemoryStream con informacion del archivo</param>
+            <param name="tipo">Tipo de adjunto del archivo. mas Información :http://integradordemo.tufactura.co/Help/ResourceModel?modelName=AdjuntoInput</param>
+            <param name="NombreArchivo">El nombre con el que sera almacenado el Archivo. debe contener la extencion del archivo.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.ObtenerImagenQr(TuFactura.co.Modelo.FacturaEmitida)">
+            <summary>
+            Genera el arreglo de byte que corresponden a la Imagen (.JPG) del código QR de la Factura de venta. Es utilizado Para completar la representación Gráfica de la Factura.
+            </summary>
+            <param name="FacturaVetnta">Objeto retornado por el metodo EmitirFacturaAsync</param>
+            <returns>Arreglo de byte de la Imagen (.JPG) del código QR de la Factura de venta</returns>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.ObtenerImagenQr(TuFactura.co.Modelo.FacturaEmitida,System.String)">
+            <summary>
+            Almacena la Imagen (.JPG) del codigo QR de la Factura de venta en una ubicación del disco.
+            </summary>
+            <param name="FacturaVetnta">Objeto retornado por el metodo EmitirFacturaAsync </param>
+            <param name="Directorio">Directorio donde sera almacenada la imagen. debe terminar con \</param>
+            <returns>El Path o ruta completa de la Imagen (.JPG) del codigo QR de la Factura de venta </returns>
+        </member>
+        <member name="M:TuFactura.co.TuFacturaco.ObtenerImagenQr(System.String)">
+            <summary>
+            permite gestionar la Imagen (.JPG) del codigo QR de la Factura de venta en memoria. 
+            </summary>
+            <param name="QrB64">B64 de la imagen retornada por el método EmitirFacturaAsync(FactQRBase64)  </param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

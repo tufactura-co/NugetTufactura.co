@@ -1,0 +1,13 @@
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\bin\Debug\prueba-Nuget.exe.config
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\bin\Debug\prueba-Nuget.exe
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\bin\Debug\prueba-Nuget.pdb
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\bin\Debug\Newtonsoft.Json.dll
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\bin\Debug\System.Net.Http.Extensions.dll
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\bin\Debug\System.Net.Http.Formatting.dll
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\bin\Debug\System.Net.Http.Primitives.dll
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\bin\Debug\TuFactura.co.dll
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\bin\Debug\Newtonsoft.Json.pdb
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\bin\Debug\Newtonsoft.Json.xml
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\obj\Debug\prueba-Nuget.csprojResolveAssemblyReference.cache
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\obj\Debug\prueba-Nuget.exe
+c:\users\administrador\documents\visual studio 2017\Projects\prueba-Nuget\prueba-Nuget\obj\Debug\prueba-Nuget.pdb
