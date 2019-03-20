@@ -26,7 +26,7 @@ namespace prueba_Nuget
             TuFacturaco tufactura = new TuFacturaco(Usuario, Pass, Suscriptor, Ambientes.Habilitacion) ;           
 
 
-            ///COnsultamos Estdo de Servicios e Informacion del Facturador
+            ///Consultamos Estdo de Servicios e Informacion del Facturador
             var resul = tufactura.EstadoAsync().Result;
 
 
@@ -35,6 +35,8 @@ namespace prueba_Nuget
             Tercero = ObetenerPersona();
 
             ///Creamos o Actualizamos el tercero 
+           //Se Valida la estructura del objeto antes de enviar al servicio
+           //Si se presentan errores en la estructura del objeto se retornara un listado de todos los errores presentes.
             var persona =  tufactura.CrearActualizarPersonaAsync(Tercero).Result.Persona.FirstOrDefault();
 
             FacturaVenta Factura = new FacturaVenta();
@@ -86,7 +88,7 @@ namespace prueba_Nuget
         static private List<AdjuntoInput> ObtenerAdjuntos(TuFacturaco tufactura)
         {
 
-            //El metodo tiene sibrecargas para recibir un Stream o MemoryStream
+            //El metodo tiene sobrecargas para recibir un Stream o MemoryStream
             /*tufactura.GenerarAdjunto(Stream stream, TipoAdjunto tipo, string NombreArchivo)
             tufactura.GenerarAdjunto(MemoryStream memoryStream, TipoAdjunto tipo, string NombreArchivo)*/
             List<AdjuntoInput> Adjuntos = new List<AdjuntoInput>();
