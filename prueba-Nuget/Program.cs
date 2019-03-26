@@ -71,7 +71,7 @@ namespace prueba_Nuget
             var imagen1 = tufactura.ObtenerImagenQr(facturaEmitida);
 
             //Guardamos la Imagen en disco y obtenemos la ruta de la imagen
-            var imagen2 = tufactura.ObtenerImagenQr(facturaEmitida, @"C:\Users\Administrador\Desktop\Escrituras\");
+            var imagen2 = tufactura.ObtenerImagenQr(facturaEmitida, @"C:\Temp\");
 
             //Obtenemos el MemoryStream de la Imagen JPG del QR de la factura.
             var imagen3 = tufactura.ObtenerImagenQr(facturaEmitida.FacturaGenerada.FactQRBase64);
@@ -92,15 +92,15 @@ namespace prueba_Nuget
             /*tufactura.GenerarAdjunto(Stream stream, TipoAdjunto tipo, string NombreArchivo)
             tufactura.GenerarAdjunto(MemoryStream memoryStream, TipoAdjunto tipo, string NombreArchivo)*/
             List<AdjuntoInput> Adjuntos = new List<AdjuntoInput>();
-            var archivo = tufactura.GenerarAdjunto(@"C:\Users\Administrador\Downloads\02_nov._2018_10_57_4.pdf", TipoAdjunto.Representacion);
+            var archivo = tufactura.GenerarAdjunto(@"C:\Temp\02_nov._2018_10_57_4.pdf", TipoAdjunto.Representacion);
             Adjuntos.Add(archivo);
-            archivo = tufactura.GenerarAdjunto(@"C:\Users\Administrador\Downloads\face_f081102337100000005CF.zip", TipoAdjunto.AdjuntoCorreo);
+            archivo = tufactura.GenerarAdjunto(@"C:\Temp\face_f081102337100000005CF.zip", TipoAdjunto.AdjuntoCorreo);
             Adjuntos.Add(archivo);
-            archivo = tufactura.GenerarAdjunto(@"C:\Users\Administrador\Downloads\Reporte-811023371.xlsx", TipoAdjunto.AdjuntoCorreo);
+            archivo = tufactura.GenerarAdjunto(@"C:\Temp\Reporte-811023371.xlsx", TipoAdjunto.AdjuntoCorreo);
             Adjuntos.Add(archivo);
-            archivo = tufactura.GenerarAdjunto(@"C:\Users\Administrador\Downloads\Braveheart Remix [Tiesto].mp3", TipoAdjunto.AdjuntoPortal);
+            archivo = tufactura.GenerarAdjunto(@"C:\Temp\Braveheart Remix [Tiesto].mp3", TipoAdjunto.AdjuntoPortal);
             Adjuntos.Add(archivo);
-            archivo = tufactura.GenerarAdjunto(@"C:\Users\Administrador\Downloads\ImpresionFinal.mp4", TipoAdjunto.AdjuntoPortal);
+            archivo = tufactura.GenerarAdjunto(@"C:\Temp\ImpresionFinal.mp4", TipoAdjunto.AdjuntoPortal);
             Adjuntos.Add(archivo);
             return Adjuntos;
 
